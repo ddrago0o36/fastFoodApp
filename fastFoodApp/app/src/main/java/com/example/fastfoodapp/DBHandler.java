@@ -2,8 +2,10 @@ package com.example.fastfoodapp;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.EditText;
 
 public class DBHandler extends SQLiteOpenHelper {
 
@@ -84,6 +86,14 @@ public class DBHandler extends SQLiteOpenHelper {
         db.close();
     }
 
+    public boolean checkusers(String username, String password){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("SELECT *  FROM mylogin WHERE name = ? and password= ?",new String[] {username,password});
+        if(cursor.getCount() >0)
+            return true;
+        else
+            return false;
+    }
 
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // this method is called to check if the table exists already.

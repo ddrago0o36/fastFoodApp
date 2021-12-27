@@ -9,11 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.fastfoodapp.R;
-
 public class RegisterActivity extends AppCompatActivity {
 
-    // creating variables for our edittext, button and dbhandler
+    // creating variables for our edittext, button and db_handler
     private EditText userName, email, password, repPassword;
     private Button registerBTN;
     private DBHandler dbHandler;
@@ -30,7 +28,7 @@ public class RegisterActivity extends AppCompatActivity {
         repPassword = findViewById(R.id.idEdtRepPassword);
         registerBTN = findViewById(R.id.idBtnAddUser);
 
-        // creating a new dbhandler class
+        // creating a new db_handler class
         // and passing our context to it.
         dbHandler = new DBHandler(RegisterActivity.this);
 
@@ -69,7 +67,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     public void Login(View view) {
         Intent i = new Intent();
-        i.setClass(getApplicationContext(), MainActivity.class);
+        i.setClass(getApplicationContext(), LoginActivity.class);
         i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         getApplicationContext().startActivity(i);
     }
