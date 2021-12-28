@@ -6,7 +6,7 @@
     <item android:id="@+id/info"
 
         android:title="@string/info"
-        android:icon="@drawable/info"
+        android:icon="@drawable/inf"
         app:showAsAction="ifRoom"
 
         >
@@ -15,7 +15,7 @@
     <item android:id="@+id/fav"
 
         android:title="@string/favourite"
-        android:icon="@drawable/hearth"
+        android:icon="@drawable/fav"
         app:showAsAction="always"
         >
     </item>
