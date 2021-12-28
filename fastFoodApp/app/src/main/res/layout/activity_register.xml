@@ -7,10 +7,10 @@
     tools:context=".LoginActivity"
     android:orientation="vertical">
 
-
     <!--
-    This is xml for login page
+    This is xml for register page
     -->
+
 
 
     <!--edit text to enter course duration-->
@@ -18,7 +18,6 @@
         android:id="@+id/icon"
         android:layout_width="89dp"
         android:layout_height="89dp"
-
         android:layout_margin="10dp"
         android:layout_gravity="center"
         android:layout_marginTop="80dp"/>
@@ -29,10 +28,14 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:hint=" Enter user name"
-
         android:minHeight="48dp" />
 
-
+    <EditText
+        android:id="@+id/idEdtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint=" Enter valid email" />
 
     <!--edit text to display course tracks-->
     <EditText
@@ -40,39 +43,34 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-
         android:hint=" Enter password" />
 
     <!--edit text for course description-->
-
-
-    <!--button for adding new course-->
-    <Button
-        android:id="@+id/idBtnLogin"
-
+    <EditText
+        android:id="@+id/idEdtRepPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:onClick="Login_To_main"
-        android:text="Login"
-        android:textAllCaps="false"
-        android:textColor="@color/black" />
+        android:hint=" Repeat password" />
 
-    <TextView
-        android:id="@+id/question"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Don't have registration?"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center"/>
+    <!--button for adding new course-->
     <Button
         android:id="@+id/idBtnAddUser"
-
         android:textColor="@color/black"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:text="Register"
+        android:textAllCaps="false"
         android:onClick="Register"/>
+    <Button
+        android:id="@+id/idBtnLogin2"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:onClick="Login"/>
 
 </LinearLayout>

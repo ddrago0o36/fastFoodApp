@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -13,7 +12,7 @@ public class LoginActivity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstance) {
         super.onCreate(savedInstance);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
     }
 
     public void Login_To_main(View view) {

@@ -9,17 +9,16 @@ import android.widget.EditText;
 
 public class DBHandler extends SQLiteOpenHelper {
 
-    // creating a constant variables for our database.
-    // below variable is for our database name.
+    // DB name
     private static final String DB_NAME = "fastFood.db";
 
-    // below int is our database version
+    //DB version
     private static final int DB_VERSION = 1;
 
-    // below variable is for our table name.
+    // DB- table name
     private static final String TABLE_NAME = "mylogin";
 
-    // below variable is for our id column.
+    //ID column
     private static final String ID_COL = "id";
 
     // below variable is for our course name column
@@ -39,13 +38,10 @@ public class DBHandler extends SQLiteOpenHelper {
         super(cxt,DB_NAME,null,DB_VERSION);
     }
 
-    // below method is for creating a database by running a sqlite query
+    // Create a DB
 
     public void onCreate(SQLiteDatabase db) {
-        // on below line we are creating
-        // an sqlite query and we are
-        // setting our column names
-        // along with their data types.
+        //SQlITE Query for creating DB table + var types
         String query = "CREATE TABLE " + TABLE_NAME + " ("
                 + ID_COL + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + NAME_COL + " TEXT,"
@@ -53,8 +49,7 @@ public class DBHandler extends SQLiteOpenHelper {
                 + PASS_COL + " TEXT,"
                 + REPPASS_COL + " TEXT)";
 
-        // at last we are calling a exec sql
-        // method to execute above sql query
+        //Executing the query
         db.execSQL(query);
     }
 
@@ -86,6 +81,12 @@ public class DBHandler extends SQLiteOpenHelper {
         db.close();
     }
 
+    /**
+     * Check for existing username and password
+     * @param username
+     * @param password
+     * @return
+     */
     public boolean checkusers(String username, String password){
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery("SELECT *  FROM mylogin WHERE name = ? and password= ?",new String[] {username,password});
@@ -95,8 +96,13 @@ public class DBHandler extends SQLiteOpenHelper {
             return false;
     }
 
+    /**
+     * Check if the DB has already been created
+     * @param db
+     * @param oldVersion
+     * @param newVersion
+     */
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        // this method is called to check if the table exists already.
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
         onCreate(db);
     }
