@@ -7,9 +7,7 @@
 
         android:title="@string/info"
         android:icon="@drawable/inf"
-        app:showAsAction="ifRoom"
-
-        >
+        app:showAsAction="ifRoom">
     </item>
 
     <item android:id="@+id/fav"

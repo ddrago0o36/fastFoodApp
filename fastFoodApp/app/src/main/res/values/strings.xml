@@ -9,4 +9,8 @@
     <string name="Burger">Burger</string>
     <string name="info">info</string>
     <string name="favourite" />
+    <string name="n">Пица Маргарита \nСъставки: Моцарела, кашкавал, домати, черен пипер, зехтин, босилек</string>
+    <string name="n2">Пица Прошуто \nСъставки: Шунка, моцарела, доматен сос, чесън, сирене, лук, пармезан, босилек,домати</string>
+    <string name="n3">Пица Пеперони \nСъставки: Доматен сос, моцарела, кашкавал, салам \'пеперони\',маслини</string>
+    <string name="product">Изберете продукт</string>
 </resources>
