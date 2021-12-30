@@ -5,32 +5,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/main_bck">
 
 
     <!--
     This is xml for login page
     -->
 
-
+<TextView
+    android:layout_marginTop="140dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Welcome"
+    android:textSize="50dp"
+    android:textColor="#FFFFFF"
+    />
     <!--edit text to enter course duration-->
-    <ImageView
-        android:id="@+id/icon"
-        android:layout_width="89dp"
-        android:layout_height="89dp"
 
-        android:layout_margin="10dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="80dp"/>
 
     <EditText
         android:id="@+id/idEdtUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:hint=" Enter user name"
+        android:layout_marginTop="20dp"
 
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:background="@drawable/rounded_textvies"/>
 
 
 
@@ -39,8 +44,11 @@
         android:id="@+id/idEdtPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/rounded_textvies"
+        android:layout_marginTop="20dp"
+        android:minHeight="48dp"
         android:hint=" Enter password" />
 
     <!--edit text for course description-->
@@ -52,11 +60,15 @@
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:onClick="Login_To_main"
         android:text="Login"
         android:textAllCaps="false"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:backgroundTint="#FFFF00"/>
 
     <TextView
         android:id="@+id/question"
@@ -64,15 +76,21 @@
         android:layout_height="wrap_content"
         android:text="Don't have registration?"
         android:layout_marginTop="20dp"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:textColor="#FFFFFF"/>
     <Button
         android:id="@+id/idBtnAddUser"
-
         android:textColor="@color/black"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:text="Register"
-        android:onClick="Register"/>
+        android:textAllCaps="false"
+        android:onClick="Register"
+        android:textSize="20dp"
+        android:backgroundTint="#FFFF00"
+        />
 
 </LinearLayout>

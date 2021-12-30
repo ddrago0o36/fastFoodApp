@@ -45,7 +45,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                 // validating if the text fields are empty or not.
                 if (nameUser.length() == 0 || emailUser.length() == 0 || passwordUser.length() == 0 || repPasswordUser.length() == 0 || !passwordUser.equals(repPasswordUser)) {
-                    Toast.makeText(RegisterActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, "Fill all the fields", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -59,17 +59,17 @@ public class RegisterActivity extends AppCompatActivity {
                 password.setText("");
                 email.setText("");
                 repPassword.setText("");
+
+                //back to welcome page
+                Intent i = new Intent();
+                i.setClass(getApplicationContext(), LoginActivity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                getApplicationContext().startActivity(i);
             }
         });
 
 
     }
 
-    public void Login(View view) {
-        Intent i = new Intent();
-        i.setClass(getApplicationContext(), LoginActivity.class);
-        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        getApplicationContext().startActivity(i);
-    }
 
 }

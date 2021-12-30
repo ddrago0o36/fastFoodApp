@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/main_bck">
 
     <!--
     This is xml for register page
@@ -14,35 +15,50 @@
 
 
     <!--edit text to enter course duration-->
-    <ImageView
+    <TextView
         android:id="@+id/icon"
-        android:layout_width="89dp"
-        android:layout_height="89dp"
-        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
         android:layout_gravity="center"
-        android:layout_marginTop="80dp"/>
+        android:layout_marginTop="80dp"
+        android:text="Register"
+        android:textColor="#FFFFFF"
+        android:textSize="40dp"/>
 
     <EditText
         android:id="@+id/idEdtUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:hint=" Enter user name"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:background="@drawable/rounded_textvies"
+        />
 
     <EditText
         android:id="@+id/idEdtEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:hint=" Enter valid email" />
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:minHeight="48dp"
+        android:hint=" Enter valid email"
+        android:background="@drawable/rounded_textvies"/>
 
     <!--edit text to display course tracks-->
     <EditText
         android:id="@+id/idEdtPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:minHeight="48dp"
+        android:background="@drawable/rounded_textvies"
         android:hint=" Enter password" />
 
     <!--edit text for course description-->
@@ -50,7 +66,11 @@
         android:id="@+id/idEdtRepPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:minHeight="48dp"
+        android:background="@drawable/rounded_textvies"
         android:hint=" Repeat password" />
 
     <!--button for adding new course-->
@@ -59,18 +79,14 @@
         android:textColor="@color/black"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:text="Register"
         android:textAllCaps="false"
-        android:onClick="Register"/>
-    <Button
-        android:id="@+id/idBtnLogin2"
-        android:textColor="@color/black"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="Login"
-        android:textAllCaps="false"
-        android:onClick="Login"/>
+        android:onClick="Register"
+        android:textSize="20dp"
+        android:backgroundTint="#FFFF00"/>
+
 
 </LinearLayout>

@@ -29,7 +29,8 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_margin="20dp"
-            android:background="@drawable/layout_bg">
+            android:background="@drawable/pizza_bck"
+            android:onClick="expand_pizza">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -41,22 +42,24 @@
                 android:textColor="@color/white"
                 android:textSize="40sp" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:background="#00000000"
-                android:onClick="expand_pizza"
-                android:padding="20dp"
-                android:text="@string/expand"
-                android:textColor="@color/white" />
+<!--            <Button-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:background="#00000000"-->
+<!--                android:onClick="expand_pizza"-->
+<!--                android:padding="20dp"-->
+<!--                android:text="@string/expand"-->
+<!--                android:textColor="@color/white" />-->
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_margin="20dp"
-            android:background="@drawable/layout_bg">
+            android:background="@drawable/burger_bck2"
+            android:onClick="expand_burger"
+            >
 
             <TextView
                 android:layout_width="wrap_content"
@@ -68,16 +71,16 @@
                 android:textColor="@color/white"
                 android:textSize="40sp" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="0dp"
-                android:background="#00000000"
-                android:onClick="expand_burger"
-                android:padding="20dp"
-                android:text="@string/expand"
-                android:textColor="@color/white" />
+<!--            <Button-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_marginBottom="0dp"-->
+<!--                android:background="#00000000"-->
+<!--                android:onClick="expand_burger"-->
+<!--                android:padding="20dp"-->
+<!--                android:text="@string/expand"-->
+<!--                android:textColor="@color/white" />-->
         </RelativeLayout>
 
     </LinearLayout>
