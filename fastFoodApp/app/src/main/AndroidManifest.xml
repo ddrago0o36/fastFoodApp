@@ -10,21 +10,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FastFoodApp">
         <activity
-            android:name=".BurgerActivity"
+            android:name=".CarActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".FavouriteActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".BurgerActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".PizzaActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="false"
-            android:parentActivityName=".LoginActivity"/>
+            android:parentActivityName=".LoginActivity" />
         <activity
             android:name=".RegisterActivity"
             android:exported="false"
-            android:parentActivityName=".LoginActivity"/>
+            android:parentActivityName=".LoginActivity" />
         <activity
             android:name=".LoginActivity"
             android:exported="true">
@@ -34,9 +42,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
-
     </application>
 
 </manifest>

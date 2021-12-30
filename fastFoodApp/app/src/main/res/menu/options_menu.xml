@@ -17,4 +17,7 @@
         app:showAsAction="always"
         >
     </item>
+    <item
+        android:id="@+id/car"
+        android:title="Количка"/>
 </menu>
