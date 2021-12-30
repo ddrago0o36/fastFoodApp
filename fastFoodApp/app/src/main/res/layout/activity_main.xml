@@ -19,7 +19,7 @@
             android:padding="10dp"
             android:text="@string/categories"
             android:textAllCaps="true"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="25sp"
             android:layout_marginStart="110dp">
 
@@ -27,9 +27,9 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="197dp"
             android:layout_margin="20dp"
-            android:background="@drawable/pizza_bck"
+            android:background="@drawable/pizzaa"
             android:onClick="expand_pizza">
 
             <TextView
@@ -37,50 +37,32 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="70dp"
                 android:fontFamily="Arial"
+                android:layout_marginTop="20dp"
                 android:padding="50dp"
                 android:text="@string/Pizza"
                 android:textColor="@color/white"
                 android:textSize="40sp" />
 
-<!--            <Button-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_alignParentBottom="true"-->
-<!--                android:background="#00000000"-->
-<!--                android:onClick="expand_pizza"-->
-<!--                android:padding="20dp"-->
-<!--                android:text="@string/expand"-->
-<!--                android:textColor="@color/white" />-->
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="228dp"
             android:layout_margin="20dp"
-            android:background="@drawable/burger_bck2"
-            android:onClick="expand_burger"
-            >
+            android:background="@drawable/burger"
+            android:onClick="expand_burger">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="70dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="35dp"
                 android:fontFamily="Arial"
                 android:padding="50dp"
                 android:text="@string/Burger"
                 android:textColor="@color/white"
                 android:textSize="40sp" />
 
-<!--            <Button-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_alignParentBottom="true"-->
-<!--                android:layout_marginBottom="0dp"-->
-<!--                android:background="#00000000"-->
-<!--                android:onClick="expand_burger"-->
-<!--                android:padding="20dp"-->
-<!--                android:text="@string/expand"-->
-<!--                android:textColor="@color/white" />-->
         </RelativeLayout>
 
     </LinearLayout>
