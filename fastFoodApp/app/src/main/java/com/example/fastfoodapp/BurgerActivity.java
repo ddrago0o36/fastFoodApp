@@ -6,8 +6,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class BurgerActivity extends AppCompatActivity {
@@ -49,7 +51,17 @@ public class BurgerActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
     @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        getMenuInflater().inflate(R.menu.context_menu,menu);
+
+        super.onCreateContextMenu(menu, v, menuInfo);
+    }
+
+    @Override
     public boolean onContextItemSelected(@NonNull MenuItem item) {
+
+
+
         return super.onContextItemSelected(item);
     }
 }

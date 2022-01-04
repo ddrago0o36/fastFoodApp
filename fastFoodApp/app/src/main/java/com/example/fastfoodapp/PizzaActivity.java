@@ -10,13 +10,24 @@ import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 public class PizzaActivity extends AppCompatActivity {
+
+    String pizza;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pizza);
+
+        registerForContextMenu(findViewById(R.id.pizza1));
+        registerForContextMenu(findViewById(R.id.pizza2));
+        registerForContextMenu(findViewById(R.id.pizza3));
+        registerForContextMenu(findViewById(R.id.tvp1));
+        registerForContextMenu(findViewById(R.id.tvp2));
+        registerForContextMenu(findViewById(R.id.tvp3));
+
     }
 
 
@@ -50,9 +61,47 @@ public class PizzaActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        getMenuInflater().inflate(R.menu.context_menu,menu);
+
+
+        switch (v.getId()){
+            case R.id.pizza1:
+                pizza = "Пица Маргарита";
+                break;
+            case R.id.pizza2:
+                pizza = "Пица Прошуто";
+                break;
+            case R.id.pizza3:
+                pizza = "Пица Пеперони";
+                break;
+            default:
+                Toast.makeText(getApplicationContext(),"Не е избрана опция",Toast.LENGTH_SHORT).show();
+        }
+        super.onCreateContextMenu(menu, v, menuInfo);
+    }
+
 
     @Override
     public boolean onContextItemSelected(@NonNull MenuItem item) {
-        return super.onContextItemSelected(item);
+        Bundle strFav = new Bundle();
+        String strCart ;
+        switch (item.getItemId()){
+            case R.id.favourite:
+
+                Intent i = new Intent(this,PizzaActivity.class);
+                i.putExtra("pizza",strFav);
+                i.setClass(getApplicationContext(),FavouriteActivity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                getApplicationContext().startActivity(i);
+                Toast.makeText(getApplicationContext(),pizza +"e добавен в любими",Toast.LENGTH_LONG).show();
+                break;
+            case R.id.card:
+
+                Toast.makeText(getApplicationContext(),pizza +"е добавен в кошница",Toast.LENGTH_LONG).show();
+                break;
+        }
+        return true;
     }
 }
