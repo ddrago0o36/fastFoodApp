@@ -92,6 +92,8 @@ public class PizzaActivity extends AppCompatActivity {
 
                 Intent i = new Intent(this,PizzaActivity.class);
                 i.putExtra("pizza",strFav);
+                i.setClass(getApplicationContext(),FavouriteActivity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 getApplicationContext().startActivity(i);
                 Toast.makeText(getApplicationContext(),pizza +"e добавен в любими",Toast.LENGTH_LONG).show();
                 break;
