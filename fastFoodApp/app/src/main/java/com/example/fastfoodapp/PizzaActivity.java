@@ -12,9 +12,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class PizzaActivity extends AppCompatActivity {
 
+    private final ArrayList<String> fav_pizza = new ArrayList<>();
     String pizza;
+    int pizza_id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +46,7 @@ public class PizzaActivity extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.fav:
                 Intent intFav = new Intent();
+                intFav.putExtra("fv",fav_pizza);
                 intFav.setClass(getApplicationContext(),FavouriteActivity.class);
                 intFav.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 getApplicationContext().startActivity(intFav);
@@ -65,6 +70,7 @@ public class PizzaActivity extends AppCompatActivity {
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         getMenuInflater().inflate(R.menu.context_menu,menu);
 
+        pizza_id = R.id.pizza1;
 
         switch (v.getId()){
             case R.id.pizza1:
@@ -85,21 +91,14 @@ public class PizzaActivity extends AppCompatActivity {
 
     @Override
     public boolean onContextItemSelected(@NonNull MenuItem item) {
-        Bundle strFav = new Bundle();
-        String strCart ;
         switch (item.getItemId()){
             case R.id.favourite:
-
-                Intent i = new Intent(this,PizzaActivity.class);
-                i.putExtra("pizza",strFav);
-                i.setClass(getApplicationContext(),FavouriteActivity.class);
-                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                getApplicationContext().startActivity(i);
+                String p = pizza_id + ";" + pizza;
+                fav_pizza.add(p);
                 Toast.makeText(getApplicationContext(),pizza +"e добавен в любими",Toast.LENGTH_LONG).show();
                 break;
             case R.id.card:
-
-                Toast.makeText(getApplicationContext(),pizza +"е добавен в кошница",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),pizza +"е добавен в количка",Toast.LENGTH_LONG).show();
                 break;
         }
         return true;
