@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">fastFoodApp</string>
+    <string name="app_name">MANDJA</string>
     <string name="back_arrow">back_arrow</string>
     <string name="cars">Cars</string>
     <string name="expand">expand</string>
@@ -13,4 +13,9 @@
     <string name="n2">Пица Прошуто \nСъставки: Шунка, моцарела, доматен сос, чесън, сирене, лук, пармезан, босилек,домати</string>
     <string name="n3">Пица Пеперони \nСъставки: Доматен сос, моцарела, кашкавал, салам \'пеперони\',маслини</string>
     <string name="product">Изберете продукт</string>
+    <string name="pizza">PIZZA</string>
+    <string name="beefbrg">Телешки бургер \nСъставки: телешко кюфте, маруля, домати, майонеза</string>
+    <string name="cheesebrg">Чийзбургер \nСъставки: Телешка кайма, черен пипер, лук, ементал, кисели краставички</string>
+    <string name="chickenbrg">Пилешки бургер \nСъставки: пилешко месо, маруля, домати, краставички,майонеза, кетчуп</string>
+    <string name="burger">Burger</string>
 </resources>

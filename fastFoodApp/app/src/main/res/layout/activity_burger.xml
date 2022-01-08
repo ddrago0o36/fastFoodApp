@@ -7,17 +7,19 @@ android:layout_height="match_parent"
 tools:context=".PizzaActivity"
 android:background="@drawable/back_main3">
 
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Burger"
-    android:id="@+id/tv1"
-    android:textColor="@color/black"
-    android:textAlignment="center"
-    android:textStyle="bold"
-    android:textSize="30sp"
-    android:layout_margin="20dp"
-    />
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/burger"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
 <TextView
     android:id="@+id/tv2"
@@ -35,87 +37,89 @@ android:background="@drawable/back_main3">
     android:textSize="25sp" />
 
 
-<ImageView
-    android:id="@+id/burger1"
-    android:layout_width="100dp"
-    android:layout_height="100dp"
-    android:layout_below="@id/tv2"
-    android:layout_marginStart="20dp"
-    android:layout_marginTop="20dp"
-    android:layout_marginEnd="20dp"
-    android:layout_marginBottom="20dp"
-    android:background="@drawable/beefbrg"
-    android:clickable="true"
-    android:focusable="true" />
+    <ImageView
+        android:id="@+id/burger1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/tv2"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/beefbrg"
+        android:clickable="true"
+        android:focusable="true" />
 
-<TextView
-    android:id="@+id/tvp1"
-    android:layout_width="match_parent"
-    android:layout_height="100dp"
-    android:layout_below="@+id/tv2"
-    android:layout_marginStart="20dp"
-    android:layout_marginTop="20dp"
-    android:layout_marginEnd="20dp"
-    android:layout_marginBottom="20dp"
-    android:layout_toEndOf="@+id/burger1"
-    android:text="@string/n"
-    android:textColor="@color/black"
-    android:textSize="20dp"
-    android:textStyle="bold" />
-
-
-<ImageView
-    android:id="@+id/burger2"
-    android:layout_width="100dp"
-    android:layout_height="100dp"
-    android:layout_below="@id/burger1"
-    android:layout_marginStart="20dp"
-    android:layout_marginTop="20dp"
-    android:layout_marginEnd="20dp"
-    android:layout_marginBottom="20dp"
-    android:background="@drawable/cheesebrg"
-    android:clickable="true"
-    android:focusable="true" />
-
-<TextView
-    android:id="@+id/tvp2"
-    android:layout_width="match_parent"
-    android:layout_height="100dp"
-    android:layout_below="@+id/tvp1"
-    android:layout_marginStart="20dp"
-    android:layout_marginTop="20dp"
-    android:layout_marginEnd="20dp"
-    android:layout_marginBottom="20dp"
-    android:layout_toEndOf="@+id/burger2"
-    android:text="@string/n2"
-    android:textColor="@color/black"
-    android:textSize="20dp"
-    android:textStyle="bold"/>
-
-<ImageView
-    android:id="@+id/burger3"
-    android:layout_width="100dp"
-    android:layout_height="100dp"
-    android:layout_below="@id/burger2"
-    android:layout_margin="20dp"
-    android:background="@drawable/chickenbrg"
-    android:clickable="true"
-    android:focusable="true" />
-
-<TextView
-    android:id="@+id/tvp3"
-    android:layout_width="match_parent"
-    android:layout_height="100dp"
-    android:layout_below="@+id/tvp2"
-    android:layout_marginStart="20dp"
-    android:layout_marginTop="20dp"
-    android:layout_marginEnd="20dp"
-    android:layout_marginBottom="20dp"
-    android:layout_toEndOf="@+id/burger3"
-    android:text="@string/n3"
-    android:textColor="@color/black"
-    android:textSize="20dp"
-    android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/tvp1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/tv2"
+        android:layout_marginStart="-10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_toEndOf="@+id/burger1"
+        android:text="@string/beefbrg"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
 
+    <ImageView
+        android:id="@+id/burger2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/burger1"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/cheesebrg"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <TextView
+        android:id="@+id/tvp2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/tvp1"
+        android:layout_marginStart="-10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_toEndOf="@+id/burger2"
+        android:text="@string/cheesebrg"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/burger3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/burger2"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/chickenbrg"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <TextView
+        android:id="@+id/tvp3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvp2"
+        android:layout_marginStart="-10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_toEndOf="@+id/burger3"
+        android:text="@string/chickenbrg"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    
 </RelativeLayout>

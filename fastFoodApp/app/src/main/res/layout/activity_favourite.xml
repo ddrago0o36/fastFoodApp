@@ -9,7 +9,6 @@
     android:background="@drawable/back_main2"
     >
 
-
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
