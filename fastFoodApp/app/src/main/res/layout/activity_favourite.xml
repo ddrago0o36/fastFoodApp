@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".FavouriteActivity"
     android:orientation="horizontal"
-    android:background="@drawable/wood"
+    android:background="@drawable/back_main2"
     >
 
     <TextView

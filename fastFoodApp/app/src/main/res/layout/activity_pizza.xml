@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PizzaActivity"
-    android:background="@drawable/wood">
+    android:background="@drawable/back_main3">
 
     <TextView
         android:layout_width="match_parent"

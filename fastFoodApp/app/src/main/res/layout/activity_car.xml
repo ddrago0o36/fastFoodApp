@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CarActivity"
-    android:background="@drawable/wood">
+    android:background="@drawable/back_main2">
 
     <TextView
         android:layout_width="300dp"
