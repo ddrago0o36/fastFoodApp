@@ -18,4 +18,6 @@
     <string name="cheesebrg">Чийзбургер \nСъставки: Телешка кайма, черен пипер, лук, ементал, кисели краставички</string>
     <string name="chickenbrg">Пилешки бургер \nСъставки: пилешко месо, маруля, домати, краставички,майонеза, кетчуп</string>
     <string name="burger">Burger</string>
+    <string name="order">Поръчай</string>
+    <string name="porichka">Поръчката ви ще бъде готова след:</string>
 </resources>

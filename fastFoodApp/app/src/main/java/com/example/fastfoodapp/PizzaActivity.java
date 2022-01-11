@@ -3,22 +3,33 @@ package com.example.fastfoodapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+
 import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
+/**
+ *
+ */
 public class PizzaActivity extends AppCompatActivity {
 
     private final ArrayList<String> fav_pizza = new ArrayList<>();
     String pizza;
 
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -34,13 +45,22 @@ public class PizzaActivity extends AppCompatActivity {
 
     }
 
-
+    /**
+     *
+     * @param menu
+     * @return
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.options_menu,menu);
         return true;
     }
 
+    /**
+     *
+     * @param item
+     * @return
+     */
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
@@ -53,7 +73,7 @@ public class PizzaActivity extends AppCompatActivity {
                 break;
             case R.id.info:
                 Uri uri = Uri.parse("geo:0,0?q= PizzaLab,Варна");
-                Intent intent1 = new Intent(Intent.ACTION_VIEW,uri);
+                Intent intent1 = new Intent(Intent.ACTION_VIEW, uri);
                 intent1.setPackage("com.google.android.apps.maps");
                 startActivity(intent1);
                 break;
@@ -66,6 +86,13 @@ public class PizzaActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    /**
+     *
+     * @param menu
+     * @param v
+     * @param menuInfo
+     */
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         getMenuInflater().inflate(R.menu.context_menu,menu);
@@ -82,11 +109,16 @@ public class PizzaActivity extends AppCompatActivity {
                 break;
             default:
                 Toast.makeText(getApplicationContext(),"Не е избрана опция",Toast.LENGTH_SHORT).show();
+
+                super.onCreateContextMenu(menu, v, menuInfo);
         }
-        super.onCreateContextMenu(menu, v, menuInfo);
     }
 
-
+    /**
+     *
+     * @param item
+     * @return
+     */
     @Override
     public boolean onContextItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
@@ -95,6 +127,7 @@ public class PizzaActivity extends AppCompatActivity {
                 fav_pizza.add(p);
                 Toast.makeText(getApplicationContext(),pizza +"e добавен в любими",Toast.LENGTH_LONG).show();
                 break;
+
             case R.id.card:
                 Toast.makeText(getApplicationContext(),pizza +"е добавен в количка",Toast.LENGTH_LONG).show();
                 break;

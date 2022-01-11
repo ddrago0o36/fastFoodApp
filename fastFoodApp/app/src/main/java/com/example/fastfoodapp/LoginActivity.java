@@ -8,17 +8,27 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+/**
+ *
+ */
 public class LoginActivity extends AppCompatActivity {
 
+    /**
+     *
+     * @param savedInstance
+     */
     protected void onCreate(Bundle savedInstance) {
         super.onCreate(savedInstance);
         setContentView(R.layout.activity_login);
     }
 
+    /**
+     *
+     * @param view
+     */
     public void Login_To_main(View view) {
         //check if user exists
         //if true then run the intent
-
         DBHandler handler = new DBHandler(LoginActivity.this);
         EditText obj_name = findViewById(R.id.idEdtUsername);
         String name =  obj_name.getText().toString();
@@ -37,6 +47,11 @@ public class LoginActivity extends AppCompatActivity {
         }
 
     }
+
+    /**
+     *
+     * @param view
+     */
     public void Register(View view){
         Intent i = new Intent();
         i.setClass(getApplicationContext(), com.example.fastfoodapp.RegisterActivity.class);

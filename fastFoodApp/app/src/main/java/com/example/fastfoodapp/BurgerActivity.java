@@ -2,7 +2,6 @@ package com.example.fastfoodapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -11,17 +10,23 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 
-
+/**
+ *
+ */
 public class BurgerActivity extends AppCompatActivity {
 
     private final ArrayList<String> fav_burger = new ArrayList<>();
     String burger;
 
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_burger);
 
@@ -34,12 +39,22 @@ public class BurgerActivity extends AppCompatActivity {
 
     }
 
+    /**
+     *
+     * @param menu
+     * @return
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.options_menu, menu);
         return true;
     }
 
+    /**
+     *
+     * @param item
+     * @return
+     */
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
@@ -66,6 +81,12 @@ public class BurgerActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     *
+     * @param menu
+     * @param v
+     * @param menuInfo
+     */
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         getMenuInflater().inflate(R.menu.context_menu, menu);
@@ -87,7 +108,11 @@ public class BurgerActivity extends AppCompatActivity {
         }
     }
 
-
+    /**
+     *
+     * @param item
+     * @return
+     */
         @Override
         public boolean onContextItemSelected (@NonNull MenuItem item){
             switch (item.getItemId()) {

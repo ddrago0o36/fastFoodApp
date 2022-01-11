@@ -9,6 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+/**
+ *
+ */
 public class RegisterActivity extends AppCompatActivity {
 
     // creating variables for our edittext, button and db_handler
@@ -16,6 +19,10 @@ public class RegisterActivity extends AppCompatActivity {
     private Button registerBTN;
     private DBHandler dbHandler;
 
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +39,9 @@ public class RegisterActivity extends AppCompatActivity {
         // and passing our context to it.
         dbHandler = new DBHandler(RegisterActivity.this);
 
-        // below line is to add on click listener for our add course button.
+        /**
+         * below line is to add on click listener for our add course button.
+         */
         registerBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -67,9 +76,5 @@ public class RegisterActivity extends AppCompatActivity {
                 getApplicationContext().startActivity(i);
             }
         });
-
-
     }
-
-
 }

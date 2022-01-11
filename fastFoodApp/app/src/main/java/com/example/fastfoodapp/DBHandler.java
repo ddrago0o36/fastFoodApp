@@ -5,8 +5,10 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.widget.EditText;
 
+/**
+ *
+ */
 public class DBHandler extends SQLiteOpenHelper {
 
     // DB name
@@ -38,8 +40,10 @@ public class DBHandler extends SQLiteOpenHelper {
         super(cxt,DB_NAME,null,DB_VERSION);
     }
 
-    // Create a DB
-
+    /**
+     * Create a DB
+     * @param db
+     */
     public void onCreate(SQLiteDatabase db) {
         //SQlITE Query for creating DB table + var types
         String query = "CREATE TABLE " + TABLE_NAME + " ("
@@ -53,16 +57,26 @@ public class DBHandler extends SQLiteOpenHelper {
         db.execSQL(query);
     }
 
-    // this method is use to add new course to our sqlite database.
+    /**
+     * this method is use to add new course to our sqlite database.
+     * @param nameUser
+     * @param emailUser
+     * @param passUser
+     * @param repppassUser
+     */
     public void addNewUser(String nameUser, String emailUser, String passUser, String repppassUser) {
 
-        // on below line we are creating a variable for
-        // our sqlite database and calling writable method
-        // as we are writing data in our database.
+        /**
+         * on below line we are creating a variable for
+         * our sqlite database and calling writable method
+         * as we are writing data in our database.
+         */
         SQLiteDatabase db = this.getWritableDatabase();
 
-        // on below line we are creating a
-        // variable for content values.
+        /**
+         * on below line we are creating a
+         * variable for content values.
+         */
         ContentValues values = new ContentValues();
 
         // on below line we are passing all values
@@ -72,8 +86,10 @@ public class DBHandler extends SQLiteOpenHelper {
         values.put(PASS_COL, passUser);
         values.put(REPPASS_COL, repppassUser);
 
-        // after adding all values we are passing
-        // content values to our table.
+        /**
+         * after adding all values we are passing
+         * content values to our table.
+         */
         db.insert(TABLE_NAME, null, values);
 
         // at last we are closing our

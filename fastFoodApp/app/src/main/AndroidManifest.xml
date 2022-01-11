@@ -10,13 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FastFoodApp">
         <activity
+            android:name=".OrderAcitvity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            />
+        <activity
             android:name=".CarActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".FavouriteActivity"
             android:exported="false"
-            android:parentActivityName=".PizzaActivity"/>
+            android:parentActivityName=".PizzaActivity" />
         <activity
             android:name=".BurgerActivity"
             android:exported="false"
@@ -42,6 +47,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".OnHandleWork"
+            android:permission="android.permission.BIND_JOB_SERVICE">
+        </service>
     </application>
 
 </manifest>

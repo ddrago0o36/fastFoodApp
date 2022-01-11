@@ -2,7 +2,11 @@ package com.example.fastfoodapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -12,15 +16,25 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+/**
+ *
+ */
 public class MainActivity extends AppCompatActivity {
 
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
 
-
+    /**
+     *
+     * @param view
+     */
     public void expand_pizza(View view) {
         Intent pizza = new Intent();
         pizza.setClass(getApplicationContext(),PizzaActivity.class);
@@ -28,6 +42,10 @@ public class MainActivity extends AppCompatActivity {
         getApplicationContext().startActivity(pizza);
     }
 
+    /**
+     *
+     * @param view
+     */
     public void expand_burger(View view) {
         Intent burger = new Intent();
         burger.setClass(getApplicationContext(),BurgerActivity.class);
@@ -42,13 +60,17 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-
+    /**
+     *
+     * @param item
+     * @return
+     */
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.fav:
                 Intent intFav = new Intent();
-                intFav.setClass(getApplicationContext(), FavouriteActivity.class);
+                intFav.setClass(getApplicationContext(),FavouriteActivity.class);
                 intFav.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 getApplicationContext().startActivity(intFav);
                 break;
@@ -67,8 +89,4 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
-
-
-
 }
