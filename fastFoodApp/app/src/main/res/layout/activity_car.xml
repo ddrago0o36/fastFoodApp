@@ -8,13 +8,20 @@
     android:orientation="vertical"
     tools:context=".CarActivity">
 
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="200dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="100dp">
 
+    </ListView>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="150dp"
-        android:layout_marginTop="350dp"
+        android:layout_marginTop="50dp"
         android:onClick="ntf"
         android:text="@string/order"
         android:textColor="@color/black"

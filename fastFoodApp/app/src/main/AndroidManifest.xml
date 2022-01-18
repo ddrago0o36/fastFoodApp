@@ -17,7 +17,7 @@
         <activity
             android:name=".CarActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".BurgerActivity" />
         <activity
             android:name=".FavouriteActivity"
             android:exported="false"

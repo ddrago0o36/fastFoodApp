@@ -18,6 +18,7 @@ import java.util.ArrayList;
 public class BurgerActivity extends AppCompatActivity {
 
     private final ArrayList<String> fav_burger = new ArrayList<>();
+    private final ArrayList<String> cart_burger = new ArrayList<>();
     String burger;
 
     /**
@@ -36,7 +37,6 @@ public class BurgerActivity extends AppCompatActivity {
         registerForContextMenu(findViewById(R.id.tvp1));
         registerForContextMenu(findViewById(R.id.tvp2));
         registerForContextMenu(findViewById(R.id.tvp3));
-
     }
 
     /**
@@ -73,6 +73,7 @@ public class BurgerActivity extends AppCompatActivity {
                 break;
             case R.id.car:
                 Intent intcar = new Intent();
+                intcar.putExtra("brg",cart_burger);
                 intcar.setClass(getApplicationContext(), CarActivity.class);
                 intcar.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 getApplicationContext().startActivity(intcar);
@@ -122,6 +123,8 @@ public class BurgerActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), burger + " e добавен в любими", Toast.LENGTH_LONG).show();
                     break;
                 case R.id.card:
+                    String brg = burger;
+                    cart_burger.add(brg);
                     Toast.makeText(getApplicationContext(), burger + " е добавен в количка", Toast.LENGTH_LONG).show();
                     break;
             }
